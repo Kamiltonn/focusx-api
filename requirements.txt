@@ -1,7 +1,7 @@
 Flask
 Jinja2
 cohere
-pinecone
+pinecone-client
 openai
 python-dotenv
 PyPDF2
