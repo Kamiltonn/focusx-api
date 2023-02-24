@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_cors import CORS, cross_origin
 import cohere
 import pinecone
 from PyPDF2 import PdfReader
@@ -95,6 +96,7 @@ def complete(query,context=" "):
     return response['choices'][0]['text'].strip()
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/file_query", methods=['POST'])
 def file_query():
